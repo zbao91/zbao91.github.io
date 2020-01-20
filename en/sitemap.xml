@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://zbao91.github.io/about/</loc>
+    <lastmod>2020-01-17T21:41:52+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zbao91.github.io/</loc>
+    <lastmod>2020-01-17T21:41:52+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://zbao91.github.io/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://zbao91.github.io/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://zbao91.github.io/categories/</loc>
+    <lastmod>2020-01-17T18:23:30+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://zbao91.github.io/fr/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://zbao91.github.io/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://zbao91.github.io/tech/hugo-setup/</loc>
+    <lastmod>2020-01-17T18:23:30+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zbao91.github.io/categories/life/</loc>
+    <lastmod>2020-01-17T18:23:30+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zbao91.github.io/tags/</loc>
+    <lastmod>2020-01-17T18:23:30+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://zbao91.github.io/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://zbao91.github.io/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://zbao91.github.io/tags/tech/</loc>
+    <lastmod>2020-01-17T18:23:30+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zbao91.github.io/categories/tech/</loc>
+    <lastmod>2020-01-17T18:23:30+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zbao91.github.io/tech/</loc>
+    <lastmod>2020-01-17T18:23:30+08:00</lastmod>
+  </url>
+  
+</urlset>
