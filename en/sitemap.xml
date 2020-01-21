@@ -8,8 +8,18 @@
   </url>
   
   <url>
+    <loc>https://zbao91.github.io/life/hello-world/</loc>
+    <lastmod>2020-01-20T18:49:27+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zbao91.github.io/life/</loc>
+    <lastmod>2020-01-20T18:49:27+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://zbao91.github.io/</loc>
-    <lastmod>2020-01-17T21:41:52+08:00</lastmod>
+    <lastmod>2020-01-20T18:49:27+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -39,11 +49,6 @@
   
   <url>
     <loc>https://zbao91.github.io/tech/hugo-setup/</loc>
-    <lastmod>2020-01-17T18:23:30+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zbao91.github.io/categories/life/</loc>
     <lastmod>2020-01-17T18:23:30+08:00</lastmod>
   </url>
   

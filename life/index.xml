@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lives on 努力生活</title>
+    <link>https://zbao91.github.io/life/</link>
+    <description>Recent content in Lives on 努力生活</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 20 Jan 2020 18:49:27 +0800</lastBuildDate>
+    
+	<atom:link href="https://zbao91.github.io/life/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://zbao91.github.io/life/hello-world/</link>
+      <pubDate>Mon, 20 Jan 2020 18:49:27 +0800</pubDate>
+      
+      <guid>https://zbao91.github.io/life/hello-world/</guid>
+      <description>test</description>
+    </item>
+    
+  </channel>
+</rss>
