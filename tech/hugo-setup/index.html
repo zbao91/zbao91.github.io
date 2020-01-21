@@ -5,8 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="Dave">
-<meta name="description" content="TEST HHHH
-前言 岁月不饶人啊，辞职也有一段时间了，找工作的焦虑感也越来越强烈，为了找工作我第一次开始刷一些之前不曾会看的题目。也是为了记录和总结，也为了给自己加深印象，我搭建了这个博客。这篇文章主要是分享一下搭建的步骤和踩过的坑，给同样想要搭建Hugo博客的小伙帮一点帮助。同样分享下自己从网上整理的各大互联网公司的面试题。
+<meta name="description" content="前言 岁月不饶人啊，辞职也有一段时间了，找工作的焦虑感也越来越强烈，为了找工作我第一次开始刷一些之前不曾会看的题目。也是为了记录和总结，也为了给自己加深印象，我搭建了这个博客。这篇文章主要是分享一下搭建的步骤和踩过的坑，给同样想要搭建Hugo博客的小伙帮一点帮助。同样分享下自己从网上整理的各大互联网公司的面试题。
 " />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
@@ -42,13 +41,11 @@
     <meta name="theme-color" content="#252627">
 
 <meta itemprop="name" content="Hugo博客的搭建">
-<meta itemprop="description" content="TEST
-HHHH
-前言
+<meta itemprop="description" content="前言
 岁月不饶人啊，辞职也有一段时间了，找工作的焦虑感也越来越强烈，为了找工作我第一次开始刷一些之前不曾会看的题目。也是为了记录和总结，也为了给自己加深印象，我搭建了这个博客。这篇文章主要是分享一下搭建的步骤和踩过的坑，给同样想要搭建Hugo博客的小伙帮一点帮助。同样分享下自己从网上整理的各大互联网公司的面试题。">
 <meta itemprop="datePublished" content="2020-01-17T18:23:30&#43;08:00" />
 <meta itemprop="dateModified" content="2020-01-17T18:23:30&#43;08:00" />
-<meta itemprop="wordCount" content="208">
+<meta itemprop="wordCount" content="418">
 <meta itemprop="image" content="https://zbao91.github.io"/>
 
 
@@ -57,9 +54,7 @@ HHHH
 <meta name="twitter:image" content="https://zbao91.github.io"/>
 
 <meta name="twitter:title" content="Hugo博客的搭建"/>
-<meta name="twitter:description" content="TEST
-HHHH
-前言
+<meta name="twitter:description" content="前言
 岁月不饶人啊，辞职也有一段时间了，找工作的焦虑感也越来越强烈，为了找工作我第一次开始刷一些之前不曾会看的题目。也是为了记录和总结，也为了给自己加深印象，我搭建了这个博客。这篇文章主要是分享一下搭建的步骤和踩过的坑，给同样想要搭建Hugo博客的小伙帮一点帮助。同样分享下自己从网上整理的各大互联网公司的面试题。"/>
 
 
@@ -135,18 +130,16 @@ HHHH
             
 
             <div class="post-content">
-                <p>TEST
-HHHH</p>
-<h2 id="前言">前言</h2>
+                <h2 id="前言">前言</h2>
 <p>岁月不饶人啊，辞职也有一段时间了，找工作的焦虑感也越来越强烈，为了找工作我第一次开始刷一些之前不曾会看的题目。也是为了记录和总结，也为了给自己加深印象，我搭建了这个博客。这篇文章主要是分享一下搭建的步骤和踩过的坑，给同样想要搭建Hugo博客的小伙帮一点帮助。同样分享下自己从网上整理的各大互联网公司的面试题。</p>
 <h2 id="hugo安装">Hugo安装</h2>
 <p>虽然Hugo是Golang编写的，但是官网做了提示：</p>
 <blockquote>
 <p>There is lots of talk about “Hugo being written in Go”, but you don't need to install Go to enjoy Hugo. Just grab a precompiled binary!</p>
 </blockquote>
-<p>所以，其实你并不用下载Go语言就可以安装Hugo。</p>
+<p>所以，其实你并不用下载Go语言就可以安装Hugo。由于我的电脑是Mac，所以可以用Homebrew直接安装，下面我以Mac OS为例进行：</p>
 <h3 id="step-1--homebrew源切换">Step 1:  Homebrew源切换</h3>
-<p>Homebrew的源是部署在github上的，但是在国内访问特别慢，所以没有切换源的小伙伴可以切换一下。具体步骤如下：</p>
+<p>Homebrew的源是部署在github上的，但是在国内访问特别慢，所以没有切换源的小伙伴可以切换一下来增加下载速度，切换过的小伙伴可以忽略这个步骤。具体步骤如下：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 替换brew.git:</span>
 $ cd <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>brew --repo<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
 <span style="color:#75715e"># 中国科大:</span>
@@ -171,10 +164,9 @@ $ source ~/.bash_profile
 
 <span style="color:#75715e"># 应用生效:</span>
 $ brew update
-</code></pre></div><p><em>Ref：[https://www.jianshu.com/p/8a2ac505ff3e][2]</em></p>
-<h3 id="step-2-安装hugo">Step 2: 安装Hugo</h3>
-<p>官方提供的安装文档的地址如下：[https://gohugo.io/getting-started/installing/#binary-cross-platform][3]
-使用不同平台的小伙伴可以根据自己的实际情况进行安装，下面我就以MacOS为例。</p>
+</code></pre></div><h3 id="step-2-安装hugo">Step 2: 安装Hugo</h3>
+<p>官方提供的安装文档的地址如下：https://gohugo.io/getting-started/installing/#binary-cross-platform。
+使用不同平台的小伙伴可以根据自己的实际情况进行安装，</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 安装</span>
 $ brew install hugo
 <span style="color:#f92672">=</span><span style="color:#f92672">=</span>&gt; Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/bottles/hu
@@ -201,17 +193,79 @@ Bash completion has been installed to:
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hugo new site MyBlog
 </code></pre></div><p>它会自动在/Users/myname/MyBlog目录下创建博客文件</p>
 <h3 id="step-4-添加主题">Step 4: 添加主题</h3>
-<p>我的主题是从hugo的themes里面找的，名字叫<code>hello-friend-ng</code>，一个很简约的主题。</p>
+<p>我的主题是从hugo的themes里面找的，名字叫<code>hello-friend-ng</code>，一个很简约的主题，比较符合我的审美，不过主题这玩意萝卜青菜更有所爱，大家找到自己喜欢的就好。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git init
 $ git submodule add https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng
-</code></pre></div><p>然后根据自己的实际情况，对配置文件进行修改。</p>
-<h3 id="step-5-启动hugo服务">Step 5: 启动Hugo服务</h3>
+</code></pre></div><p>然后根据自己的实际情况，对配置文件进行修改。比如：</p>
+<pre><code class="language-tmol" data-lang="tmol">theme = &quot;hello-friend-ng&quot;
+</code></pre><h3 id="step-5-启动hugo服务">Step 5: 启动Hugo服务</h3>
 <p>启动命令</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hugo server -D
 </code></pre></div><p>默认端口是1313，铛铛！博客就成功启动啦！</p>
-<h2 id="上传到github">上传到github</h2>
-<p>github支持免费的托管服务，直接把</p>
+<h2 id="在github-pages进行搭建">在Github Pages进行搭建</h2>
+<p>github page的页面托管服务，虽然访问速度并不快，但是免费呀！下面介绍一步步进行网页部署：</p>
+<h3 id="step-1-创建repository">Step 1: 创建Repository</h3>
+<p>在gitub上分别创建, <code>&lt;username&gt;.github.io</code>和<code>blog</code>的两个Repository。</p>
+<h3 id="step-2-同步文件到github">Step 2: 同步文件到github</h3>
+<p>创建完毕后，将blog项目同步到本地，并且进行第一次提交：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git clone https://github.com/&lt;username&gt;/blog.git <span style="color:#75715e"># 同步rep到本地</span>
+$ mv hugo_blog/* blog/
+$ cd blog
+$ git add .
+$ git commit -m <span style="color:#e6db74">&#34;Initial commit for our Hugo site.&#34;</span>
+$ git submodule add https://github.com/&lt;username&gt;/&lt;username&gt;.github.io.git &lt;username&gt;.github.io.git
+$ git add .
+$ git commit -m <span style="color:#e6db74">&#34;Initial commit for our generated HTML.&#34;</span>
+$ git push -u origin master
+</code></pre></div><h3 id="step-3-修改配置文件">Step 3: 修改配置文件</h3>
+<p>然后修改<code>config.toml</code>文件，修改参数<code>baseURL</code>和<code>publishDir</code>：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#34;https://&lt;username&gt;.github.io/&#34;</span>
+<span style="color:#a6e22e">publishDir</span>   = <span style="color:#e6db74">&#34;&lt;username&gt;.github.io&#34;</span>
+</code></pre></div><blockquote>
+<p>注意！！！<br>
+这里的配置文件一定要修改正确，不然网页是无法在github pages上成功显示的！！</p>
+</blockquote>
+<h3 id="step-4-推送网页文件">Step 4: 推送网页文件</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hugo <span style="color:#75715e"># 会在&lt;username&gt;.github.io文件夹生成html、xml等文件</span>
+$ cd &lt;username&gt;.github.io
+$ git add .
+$ git commit -m <span style="color:#e6db74">&#34;First commit&#34;</span>
+$ git push origin master
+</code></pre></div><p>好了，正常情况下过不到1分钟打开就能看到你自己的博客网站啦！</p>
+<h3 id="step-5-推送文章">Step 5: 推送文章</h3>
+<p>考虑到有的小伙伴对git这个工具不是很熟悉，下面的步骤是为这些小伙伴准备的。当你写了一篇新的博客的时候，要把这篇文章单独提交，这个时候就不能使用<code>git add .</code>，这样会将这个路径下所有的文件重新提交，容易遇到冲突的问题。下面是如何操作单独提交MarkDown文档：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git status <span style="color:#75715e"># 查看当前项目下，哪些地方做了修改</span>
+On branch master
+Your branch is up to date with <span style="color:#e6db74">&#39;origin/master&#39;</span>.
+
+Changes not staged <span style="color:#66d9ef">for</span> commit:
+  <span style="color:#f92672">(</span>use <span style="color:#e6db74">&#34;git add &lt;file&gt;...&#34;</span> to update what will be committed<span style="color:#f92672">)</span>
+  <span style="color:#f92672">(</span>use <span style="color:#e6db74">&#34;git checkout -- &lt;file&gt;...&#34;</span> to discard changes in working directory<span style="color:#f92672">)</span>
+
+	modified:   content/.DS_Store
+	modified:   content/tech/hugo-setup.md
+<span style="color:#75715e"># 从上面看的处，hugo-setup.md做了修改，所以只要单独提交这个文件就行了</span>
+$ git add content/tech/hugo-setup.md
+$ git commit -m <span style="color:#e6db74">&#34;new commit&#34;</span>
+$ git push origin master
+</code></pre></div><p>有时候你的博客会长时间没有刷新你改动的地方，那么可以重新提交<code>&lt;username&gt;.github.io</code>下的静态网页文件。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd &lt;username&gt;.github.io
+$ rm -rf *
+$ cd ..
+$ hugo
+$ cd &lt;username&gt;.github.io
+$ git add .
+$ git commit -m <span style="color:#e6db74">&#34;rebuild commit&#34;</span>
+$ git push origin master
+</code></pre></div><p>好了，希望对有需要的朋友有所帮助，我也会在接下来的时候录制一个博客部署的视频。谢谢！</p>
+<h2 id="总结">总结</h2>
+<p>博客只是一个媒介，一个平台。不管你的皮肤多么好看，功能多么齐全，最核心的部分还是你的内容，只有持续不断写作才是真正有意义的事情。共勉！！！</p>
 <hr>
+<p>Ref:</p>
+<ul>
+<li><a href="https://inside.getambassador.com/creating-and-deploying-your-first-hugo-site-to-github-pages-1e1f496cf88d">https://inside.getambassador.com/creating-and-deploying-your-first-hugo-site-to-github-pages-1e1f496cf88d</a></li>
+<li><a href="https://www.jianshu.com/p/8a2ac505ff3e">https://www.jianshu.com/p/8a2ac505ff3e</a></li>
+</ul>
             </div>
         </article>
 
