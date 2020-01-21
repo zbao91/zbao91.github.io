@@ -45,7 +45,7 @@
 岁月不饶人啊，辞职也有一段时间了，找工作的焦虑感也越来越强烈，为了找工作我第一次开始刷一些之前不曾会看的题目。也是为了记录和总结，也为了给自己加深印象，我搭建了这个博客。这篇文章主要是分享一下搭建的步骤，给同样想要搭建Hugo博客的小伙伴做参考。同样分享下自己从网上整理的各大互联网公司的面试题。">
 <meta itemprop="datePublished" content="2020-01-17T18:23:30&#43;08:00" />
 <meta itemprop="dateModified" content="2020-01-17T18:23:30&#43;08:00" />
-<meta itemprop="wordCount" content="415">
+<meta itemprop="wordCount" content="404">
 <meta itemprop="image" content="https://zbao91.github.io"/>
 
 
@@ -233,32 +233,36 @@ $ git push origin master
 </code></pre></div><p>好了，正常情况下过不到1分钟打开就能看到你自己的博客网站啦！</p>
 <h3 id="step-5-推送文章">Step 5: 推送文章</h3>
 <p>考虑到有的小伙伴对git这个工具不是很熟悉，我写了一个shell脚本，不太熟悉git的小伙伴可以直接使用下面的shell脚本来推送新文章：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git status <span style="color:#75715e"># 查看当前项目下，哪些地方做了修改</span>
-On branch master
-Your branch is up to date with <span style="color:#e6db74">&#39;origin/master&#39;</span>.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/sh
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># If a command fails then the deploy stops</span>
+set -e
 
-Changes not staged <span style="color:#66d9ef">for</span> commit:
-  <span style="color:#f92672">(</span>use <span style="color:#e6db74">&#34;git add &lt;file&gt;...&#34;</span> to update what will be committed<span style="color:#f92672">)</span>
-  <span style="color:#f92672">(</span>use <span style="color:#e6db74">&#34;git checkout -- &lt;file&gt;...&#34;</span> to discard changes in working directory<span style="color:#f92672">)</span>
+printf <span style="color:#e6db74">&#34;\033[0;32mDeploying updates to GitHub...\033[0m\n&#34;</span>
 
-	modified:   content/.DS_Store
-	modified:   content/tech/hugo-setup.md
-<span style="color:#75715e"># 从上面看的处，hugo-setup.md做了修改，所以只要单独提交这个文件就行了</span>
-$ git add content/tech/hugo-setup.md
-$ git commit -m <span style="color:#e6db74">&#34;new commit&#34;</span>
-$ git push origin master
-</code></pre></div><p>有时候你的博客会长时间没有刷新你改动的地方，那么可以重新提交<code>&lt;username&gt;.github.io</code>下的静态网页文件。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd &lt;username&gt;.github.io
-$ rm -rf *
-$ cd ..
-$ hugo
-$ cd &lt;username&gt;.github.io
-$ git add .
-$ git commit -m <span style="color:#e6db74">&#34;rebuild commit&#34;</span>
-$ git push origin master
-</code></pre></div><p>好了，希望对有需要的朋友有所帮助，我也会在接下来的时候录制一个博客部署的视频。谢谢！</p>
+rm -rf &lt;username&gt;.github.io/* <span style="color:#75715e"># 这里根据你自己的用户名进行修改</span>
+
+<span style="color:#75715e"># Build the project.</span>
+hugo <span style="color:#75715e"># if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`</span>
+
+<span style="color:#75715e"># Go To Public folder</span>
+cd &lt;username&gt;.github.io <span style="color:#75715e"># 这里根据你自己的用户名进行修改</span>
+
+<span style="color:#75715e"># Add changes to git.</span>
+git add .
+
+<span style="color:#75715e"># Commit changes.</span>
+msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">rebuilding site </span><span style="color:#66d9ef">$(</span>date<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -n <span style="color:#e6db74">&#34;</span>$*<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+	msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$*<span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">fi</span>
+git commit -m <span style="color:#e6db74">&#34;</span>$msg<span style="color:#e6db74">&#34;</span>
+
+<span style="color:#75715e"># Push source and build repos.</span>
+git push origin master
+</code></pre></div><p>将文件以<code>new_posts_push.sh</code>保存在blog目录下，然后使用命令<code>sh new_posts_push.sh</code>进行推送。</p>
 <h2 id="总结">总结</h2>
-<p>博客只是一个媒介，一个平台。不管你的皮肤多么好看，功能多么齐全，最核心的部分还是你的内容，只有持续不断写作才是真正有意义的事情。共勉！！！</p>
+<p>好了，希望对有需要的朋友有所帮助，我也会在接下来的时候录制一个博客部署的视频。谢谢！当然，博客只是一个平台。不管你的博客做的多酷炫，实现了多少功能，最核心的部分还是你的内容，只有持续不断写作才是真正有意义的事情。共勉！！！</p>
 <hr>
 <p>Ref:</p>
 <ul>
